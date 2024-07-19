@@ -1,0 +1,90 @@
+/* selector {property1:value1; property2:value2; property3:value3; ... ; propertyN:valueN;} */
+/*
+	Type of selector: -
+		1. element   - HTML element names like p, div, span, table
+		2. id        - HTML id names (in css id name starts with #)
+		3. class     - HTML class names (in css class name starts with .)
+		4. universal - Applied to whole document (in 
+		5. grouping  - Combination of different selectors (separated using ,)
+*/
+
+* {
+	font-size: x-large;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-weight: bold;
+	font-style: normal;
+	text-align: center;
+}
+
+#div1 {
+	/*
+		RGB -> Red (8 bit), Green (8 bit), Blue (8 bit)
+	*/
+	background-color: rgb(19, 190, 233);
+	width: 200px;
+	height: 200px;
+}
+
+#div2 {
+	/*
+		HSL -> Hue Saturation Lightness
+		Hue: -
+			1. It represent color model from 0° to 359°
+			2. Red -> 0°, Yellow -> 60°, Green -> 120°, Cyan -> 180°, Blue -> 240°, Magenta -> 300°
+
+		Saturation: -
+			1. It represent intensity of color from 0% to 100%
+			2. Grey -> 0%, Color itself -> 100%
+
+		Lightness: -
+			1. It represent lightness of color from 0% to 100%.
+			2. Black -> 0%, Color itself -> 50%, White -> 100%
+	*/
+	background-color: hsl(239, 100%, 60%);
+	width: 200px;
+	height: 200px;
+}
+
+#div3 {
+	/*
+		RGB -> Red (8 bit), Green (8 bit), Blue (8 bit)
+
+		Alpha: -
+			1. It represent transparency of color from 0 to 1
+			2. Fully transparent -> 0, Not transparent -> 1
+	*/
+	background-color: rgba(19, 190, 233, 0.541);
+	width: 200px;
+	height: 200px;
+}
+
+#div4 {
+	/*
+		HSLA -> Hue Saturation Lightness Alpha
+		Hue: -
+			1. It represent color model from 0° to 359°
+			2. Red -> 0°, Yellow -> 60°, Green -> 120°, Cyan -> 180°, Blue -> 240°, Magenta -> 300°
+
+		Saturation: -
+			1. It represent intensity of color from 0% to 100%
+			2. Grey -> 0%, Color itself -> 100%
+
+		Lightness: -
+			1. It represent lightness of color from 0% to 100%
+			2. Black -> 0%, Color itself -> 50%, White -> 100%
+		
+		Alpha: -
+			1. It represent transparency of color from 0 to 1
+			2. Fully transparent -> 0, Not transparent -> 1
+	*/
+	background-color: rgba(51, 54, 255, 0.438);
+	width: 200px;
+	height: 200px;
+}
+
+#div_bgimg {
+	background-image: url(../IMAGES/CSS_ICON.png);
+	background-repeat: no-repeat;
+	width: 30%;
+	height: 900px;
+}

@@ -1,0 +1,546 @@
+
+<!--
+
+Attributes: -
+    1. href     -> URL of linked document or web page
+    2. src      -> URL of embedded object such as image, audio, video file
+    3. width    -> width of image
+    4. height   -> height of image
+    5. alt      -> alternate text for image
+    6. style    -> add inline css
+    7. lang     -> language type of web page
+    8. title    -> some extra information on element of web page
+    9. cite     -> specify URL reference
+    10. dir     -> specify directionality of text (ltr -> left to right; rtl -> right to left)
+    11. target  -> specify where to open the linked document (_self -> same frame(default); _blank -> new tab; _parent -> parent frame; _top -> top frame )
+    12. rowspan -> specify to join more than one row as one cell
+    13. colspan -> specify to  join more than one column as one cell
+
+    Two display value in HTML: -
+        1. Block level element  -> It start a new line and always full width available. <div></div> block level container
+        2. Inline level element -> It doesn't start a new line and only takes necessary width. <span></span> inline level container
+    
+    URL (Uniform Resource Locator): -
+        scheme://domain_prefix.domain_name:port_number/path_and_file
+
+-->
+
+<!-- It represent document type to display web pages correctly. Only works for HTML5 -->
+<!DOCTYPE html>
+<!-- HTML document itself begins with <html> and ends with </html> -->
+<html>
+    <!-- Head element is container for meta data -->
+    <head>
+        <!-- Specify character set used -->
+        <meta charset="UTF-8">
+
+        <!-- Keyword for search engines -->
+        <meta name="keyword" content="Dcoding15 HTML">
+
+        <!-- Description of web site -->
+        <meta name="description" content="Free HTML Learning Material">
+
+        <!-- Author of web site -->
+        <meta name="author" content="Debrishi Biswas">
+
+        <!-- Refresh document in every seconds -->
+        <!-- <meta http-equiv="refresh" content="40"> -->
+
+        <!-- Viewport to make website look good -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Define title of the document -->
+        <title>HTML Learning &#128526</title>
+
+        <!-- Favicon --> <!-- Link element will link html document with external resources-->
+        <link rel="shortcut icon" href="../IMAGES/HTML_ICON.png" type="image/x-icon">
+
+        <!-- Specify URL and its targets -->
+        <!-- <base href="html_basic.html" target="_blank"> -->
+
+        <!-- Internal JavaScript -->
+        <script></script>
+
+        <!-- Internal CSS -->
+        <style>
+
+        /*            Background Image            */
+            .bgimg {
+                backdrop-filter: blur(7px);
+            }
+            body {
+                background-image: url(../IMAGES/image5.png);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                z-index: -1;
+                scroll-behavior: smooth;
+                color:black;
+                font-size:30px;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            body::-webkit-scrollbar {
+                display: none;
+            }
+            a {
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+                font-weight: bolder;
+                font-size:30px;
+            }
+            th, td {
+                padding: 8px;
+                text-align: center;
+                border-style: none;
+                border-radius: 15px;
+                box-shadow: -1px 1px 4px 6px rgb(7, 222, 250);
+            }
+            table {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-spacing: 20px;
+                padding: 5px;
+            }
+            .topicon {
+                position: fixed;
+                height: 5%;
+                width: 3%;
+                margin-left: 96%;
+                margin-top: 51%;
+                border-radius: 90px;
+                box-shadow: -9px 5px 15px black;
+                z-index: 99999;
+            }
+        </style>
+    </head>
+
+    <!-- Website Body -->
+    <body>
+        <a href="#">
+            <img src="../IMAGES/top.svg" alt="rocket" class="topicon" title="INDEX PAGE">
+        </a>
+	<div class="bgimg">
+		<table>
+            <tr>
+                <th colspan="10" style="color: rgb(0, 0, 0);">INDEX</th>
+            </tr>
+            <tr>
+                <th style="box-shadow: -1px 1px 4px 6px rgb(250, 2, 44);"><a href="#ch1" style="text-decoration: none;">Text Formatting</a></th>
+                <th style="box-shadow: -1px 1px 4px 6px rgb(250, 2, 44);"><a href="#ch2" style="text-decoration: none;">Quotation and Citation</a></th>
+                <th style="box-shadow: -1px 1px 4px 6px rgb(250, 2, 44);"><a href="#ch3" style="text-decoration: none;">Hyperlink</a></th>
+                <th style="box-shadow: -1px 1px 4px 6px rgb(250, 2, 44);"><a href="#ch4" style="text-decoration: none;">Image</a></th>
+                <th style="box-shadow: -1px 1px 4px 6px rgb(250, 2, 44);"><a href="#ch5" style="text-decoration: none;">Table</a></th>
+                <th style="box-shadow: -1px 1px 4px 6px rgb(250, 2, 44);"><a href="#ch6" style="text-decoration: none;">List</a></th>
+                <th style="box-shadow: -1px 1px 4px 6px rgb(250, 2, 44);"><a href="#ch7" style="text-decoration: none;">Display Container</a></th>
+                <th style="box-shadow: -1px 1px 4px 6px rgb(250, 2, 44);"><a href="#ch8" style="text-decoration: none;">Iframe</a></th>
+            </tr>
+            <tr>
+                <td><a href="#ch1.1" style="text-decoration: none;">Headings</a></td>
+                <td><a href="#ch2.1" style="text-decoration: none;">Block Quote</a></td>
+                <td><a href="#ch3.1" style="text-decoration: none;">Text Link</a></td>
+                <td><a href="#ch4.1" style="text-decoration: none;">Local File Image</a></td>
+                <td><a href="#ch5.1" style="text-decoration: none;">Colspan</a></td>
+                <td><a href="#ch6.1" style="text-decoration: none;">Ordered List</a></td>
+                <td><a href="#ch7.1" style="text-decoration: none;">Block Level Display</a></td>
+            </tr>
+            <tr>
+                <td><a href="#ch1.2" style="text-decoration: none;">Paragraph Text</a></td>
+                <td><a href="#ch2.2" style="text-decoration: none;">Short Quote</a></td>
+                <td><a href="#ch3.2" style="text-decoration: none;">Image Link</a></td>
+                <td><a href="#ch4.2" style="text-decoration: none;">Website Image</a></td>
+                <td><a href="#ch5.2" style="text-decoration: none;">Rowspan</a></td>
+                <td><a href="#ch6.2" style="text-decoration: none;">Unordered List</a></td>
+                <td><a href="#ch7.2" style="text-decoration: none;">Inline Level Display</a></td>
+            </tr>
+            <tr>
+                <td><a href="#ch1.3" style="text-decoration: none;">Preformatted Text</a></td>
+                <td><a href="#ch2.3" style="text-decoration: none;">Abbreviations</a></td>
+                <td><a href="#ch3.3" style="text-decoration: none;">Email Link</a></td>
+                <td><a href="#ch4.3" style="text-decoration: none;">Animated Image</a></td>
+                <td style="box-shadow: none;"></td>
+                <td><a href="#ch6.3" style="text-decoration: none;">Description List</a></td>
+            </tr>
+            <tr>
+                <td><a href="#ch1.4" style="text-decoration: none;">Bold or Important Text</a></td>
+                <td><a href="#ch2.4" style="text-decoration: none;">Address</a></td>
+                <td><a href="#ch3.4" style="text-decoration: none;">Phone Link</a></td>
+                <td><a href="#ch4.4" style="text-decoration: none;">Image Map</a></td>
+            </tr>
+            <tr>
+                <td><a href="#ch1.5" style="text-decoration: none;">Italic or Emphasized Text</a></td>
+                <td><a href="#ch2.5" style="text-decoration: none;">Cite</a></td>
+                <td><a href="#ch3.5" style="text-decoration: none;">Bookmark Link</a></td>
+                <td><a href="#ch4.5" style="text-decoration: none;">Picture Element</a></td>
+            </tr>
+            <tr>
+                <td><a href="#ch1.6" style="text-decoration: none;">Smaller Text</a></td>
+                <td><a href="#ch2.6" style="text-decoration: none;">Bi-directinal Override</a></td>
+            </tr>
+            <tr>
+                <td><a href="#ch1.7" style="text-decoration: none;">Marked or Highlighted Text</a></td>
+            </tr>
+            <tr>
+                <td><a href="#ch1.8" style="text-decoration: none;">Strike Through Text</a></td>
+            </tr>
+            <tr>
+                <td><a href="#ch1.9" style="text-decoration: none;">Underlined Text</a></td>
+            </tr>
+            <tr>
+                <td><a href="#ch1.10" style="text-decoration: none;">Subscript Text</a></td>
+            </tr>
+            <tr>
+                <td><a href="#ch1.11" style="text-decoration: none;">Superscript Text</a></td>
+            </tr>
+            <tr>
+            </tr>
+        </table>
+	</div>
+
+<hr><hr><hr>
+
+        <div class="bgimg">
+        <!-- Line Break -->
+        <!-- This is <br> line <br> break -->
+
+        <!-- Horizontal Rules -->
+        <!-- <hr><hr> -->
+
+        <center><h1 id="ch1">Text Formatting</h1></center>
+
+        <!-- HTML headings defined from h1 to h6 i.e., most important to least important headings respectively -->
+        <h1 id="ch1.1">Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+
+        <!-- Paragraph Text-->
+        <p id="ch1.2">This is example of paragraph text . . .</p>
+
+        <!-- Preformatted Text -->
+        <pre id="ch1.3">
+        My Bonnie lies over the ocean.
+
+        My Bonnie lies over the sea.
+
+        My Bonnie lies over the ocean.
+        
+        Oh, bring back my Bonnie to me.
+        </pre>
+
+        <br><br>
+
+        <!-- Bold or Important Text-->
+        <b id="ch1.4">This is bold text</b><br>
+        <strong>This is important text</strong>
+
+        <br><br>
+
+        <!-- Italic or Emphasized Text-->
+        <i id="ch1.5">This is italic text</i><br>
+        <em>This is emphasized text</em>
+
+        <br><br>
+
+        <!-- Smaller Text -->
+        <small id="ch1.6">This is smaller text</small>
+
+        <br><br>
+
+        <!-- Marked or Highlighted Text-->
+        <mark id="ch1.7">This is marked text</mark>
+
+        <br><br>
+
+        <!-- Strike Through Text -->
+        <del id="ch1.8">This is strike through text</del>
+
+        <br><br>
+
+        <!-- Underlined Text -->
+        <ins id="ch1.9">This is underlined text</ins>
+
+        <br><br>
+
+        <!-- Subscript Text -->
+        H<sub id="ch1.10">2</sub>O + CO<sub>2</sub> = H<sub>2</sub>CO<sub>3</sub>
+
+        <br><br>
+
+        <!-- Superscript Text -->
+        (a+b)<sup id="ch1.11">2</sup> = a<sup>2</sup> + b<sup>2</sup> + 2*a*b
+
+        <hr><hr>
+
+        <center><h1 id="ch2">Quotation and Citation</h1></center>
+        <!-- Block Quote -->
+        <blockquote cite="https://en.wikipedia.org/wiki/Web_development" id="ch2.1">Front-end developers are responsible for behavior and visuals that run in the user browser, while back-end developers deal with the servers.</blockquote>
+
+        <br><br>
+
+        <!-- Short Quote -->
+        <q id="ch2.2">This is short quotations</q>
+
+        <br><br>
+
+        <!-- Abbreviations -->
+        <abbr title="United Nations Educational, Scientific and Cultural Organization" id="ch2.3">UNESCO</abbr>
+
+        <br><br>
+
+        <!--  Address -->
+        <address id="ch2.4">
+            Written by John Doe.<br>
+            Visit us at:<br>
+            Example.com<br>
+            Box 564, Disneyland<br>
+            USA
+        </address>
+
+        <!-- cite - defines title of creative work -->
+        <p><cite id="ch2.5">The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+
+        <!-- Bi-Directional Override -->
+        <bdo dir="rtl" id="ch2.6">This is bi-directional override</bdo>
+
+        <hr><hr>
+
+        <center><h1 id="ch3">Hyperlink</h1></center>
+        <!-- Text Link -->
+        <a href="https://www.alumni.brainwareuniversity.ac.in/profile?source=header" target="_blank" id="ch3.1">BWU Alumni Profile</a>
+        
+        <br><br>
+        
+        <!-- Image Link -->
+        <a href="https://www.instagram.com/dbv4_72.73.9.3/" target="_blank" title="@dbv4_72.73.9.3" id="ch3.2"><img src="../IMAGES/image1.png" alt="instagram icon" width="30" height="30"></a>
+
+        <br><br>
+
+        <!-- Mail Link -->
+        <a href="mailto:dungeonhunter927@gmail.com" id="ch3.3">Email</a>
+        
+        <br><br>
+
+        <!-- Phone Link-->
+        <a href="tel:+919531928326" id="ch3.4">Dial</a>
+
+        <br><br>
+
+        <!-- Bookmark Link -->
+        <a href="#" id="ch3.5">Starting Page</a>
+
+        <hr><hr>
+
+        <center><h1 id="ch4">Image</h1></center>
+
+        <!-- Local File Images -->
+        <img src="../IMAGES/image2.png" alt="Local File Image" width="200" height="150" id="ch4.1">
+
+        <br><br>
+
+        <!-- Website Images -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTzIHXjoVWtY2y_7iTDKqMXMiFmGYnJHXLLQ&s" alt="Website Image" width="200" height="150" id="ch4.2">
+        
+        <br><br>
+
+        <!-- Animated Images -->
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fe309fb6-4335-4e38-a9a5-b2b0e8fdf0db/dfowj92-91ca0b8c-2640-4b92-8bf4-2c5bb91a4fc0.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2ZlMzA5ZmI2LTQzMzUtNGUzOC1hOWE1LWIyYjBlOGZkZjBkYlwvZGZvd2o5Mi05MWNhMGI4Yy0yNjQwLTRiOTItOGJmNC0yYzViYjkxYTRmYzAuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.9p9JOOAtZLuGAlXw9SwyDj2UkxrKHDMrqjrm5_rxejg" alt="Animated Image" width="200" height="150" id="ch4.3">
+        
+        <br><br>
+
+        <!-- Image Map -->
+        <img src="../IMAGES/image3.png" alt="Workplace" usemap="#workmap" width="400" height="379" id="ch4.4">
+        <map name="workmap">
+                <area shape="default" coords="0,0,200,150" href="https://en.wikipedia.org/wiki/Organizational_culture" alt="Work Place">
+                <area shape="rect" coords="34,44,270,350" alt="Computer" href="https://en.wikipedia.org/wiki/Personal_computer">
+                <area shape="rect" coords="290,172,333,250" alt="Phone" href="https://en.wikipedia.org/wiki/Smartphone">
+                <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="https://en.wikipedia.org/wiki/Coffee">
+        </map>
+
+        <br><br>
+
+        <img src="../IMAGES/image4.png" alt="Croissant" usemap="#foodmap" width="450" height="675">
+        <map name="foodmap">
+                <area shape="poly" coords="140,121,181,116,204,160,204,222,191,270,140,329,85,355,58,352,37,322,40,259,103,161,128,147" href="https://en.wikipedia.org/wiki/Croissant" alt="Croissant">
+        </map>
+
+        <br><br>
+
+        <!-- Image Element -->
+        <picture id="ch4.5">
+                <source media="(min-width: 1000px)" srcset="../IMAGES/image2.png">
+                <source media="(min-width: 800px)" srcset="../IMAGES/image3.png">
+                <source media="(min-width: 600px)" srcset="../IMAGES/image4.png">
+                <img src="../IMAGES/HTML_ICON.png" alt="HTML icon" width="auto" width="200px" height="200px">
+        </picture>
+
+        <!-- Background Image -->
+        <div class="bg-img"></div>
+
+        <hr><hr>
+
+        <center><h1 id="ch5">Table</h1></center>
+
+        <!-- Rowspan -->
+        <table id="ch5.1">
+            <tr>
+                <th colspan="3">This is example of colspan</th>
+            </tr>
+            <tr>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>6523147789</td>
+                <td>Germany</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>5541263358</td>
+                <td>Mexico</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>6325441578</td>
+                <td>Italy</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>9956223178</td>
+                <td>Japan</td>
+            </tr>
+        </table>
+
+        <br><br>
+
+        <!-- Rowspan -->
+        <table id="ch5.2">
+            <tr>
+                <th rowspan="5">This is example of rowspan</th>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>6523147789</td>
+                <td>Germany</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>5541263358</td>
+                <td>Mexico</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>6325441578</td>
+                <td>Italy</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>9956223178</td>
+                <td>Japan</td>
+            </tr>
+        </table>
+
+        <hr><hr>
+
+        <center><h1 id="ch6">List</h1></center>
+
+        <!-- Ordered List -->
+        <ol type="1" id="ch6.1">
+            <!--  Default type -->
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+            <li>Black Tea</li>
+        </ol>
+        <ol type="A">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+            <li>Black Tea</li>
+        </ol>
+        <ol type="a">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+            <li>Black Tea</li>
+        </ol>
+        <ol type="I">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+            <li>Black Tea</li>
+        </ol>
+        <ol type="i">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+            <li>Black Tea</li>
+        </ol>
+
+        <br><br>
+
+        <!-- Unordered List -->
+        <ul type="disc" id="ch6.2">
+            <!--  Default type -->
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+            <li>Black Tea</li>
+        </ul>
+        <ul type="circle">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+            <li>Black Tea</li>
+        </ul>
+        <ul type="square">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+            <li>Black Tea</li>
+        </ul>
+        <ul type="none">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+            <li>Black Tea</li>
+        </ul>
+
+        <br><br>
+
+        <!-- Description List -->
+        <dl id="ch6.3">
+            <dt>Coffee</dt>
+            <dd>black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>white cold drink</dd>
+        </dl>
+
+        <hr><hr>
+
+        <center><h1 id="ch7">Display Container</h1></center>
+
+        <!-- Block Level -->
+        This is example of <div style="border-style: dashed;" id="ch7.1">Block Level</div> display in HTML.
+
+        <br><br>
+
+        <!-- Inline Level -->
+        This is example of <span style="border-style: dashed;" id="ch7.2">Inline Level</span> display in HTML.
+
+        <hr><hr>
+
+        <center><h1 id="ch8">Iframe</h1></center>
+
+        <iframe src="" frameborder="200px" width="98%" height="900px" name="iframe1"></iframe>
+        <a href="html_layout.html" target="iframe1">Iframe</a>
+        </div>
+    </body>
+</html>

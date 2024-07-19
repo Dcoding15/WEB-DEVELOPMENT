@@ -1,0 +1,363 @@
+<!--
+
+Input Restrictions: -
+    disabled     ->      input field should be disabled
+    readonly     ->      input field where values can't be changed
+    checked      ->      input field should be pre-selected
+    required     ->      input field must be filled out
+    multiple     ->      input field can enter more than one value
+    autofocus    ->      input field should automatically get focus when the page loads
+    novalidate   ->      form data should not be validate when submitted
+
+    value        ->      input field default value
+
+    min          ->      input field minimum value
+    max          ->      input field maximum value
+    step         ->      input field interval value
+
+    pattern      ->      input field checked using regular expression
+    maxlength    ->      input field maximum number of characters
+    size         ->      same as maxlength
+
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../IMAGES/HTML_ICON.png" type="image/x-icon">
+    <title>HTML Form</title>
+    <script>
+        if ( window.history.replaceState ) {
+            window.history.replaceState( null, null, window.location.href );
+        }
+    </script>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            color: white;
+            align-items: center;
+            justify-content: center;
+            font-size: xx-large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        textarea, select, input {
+            width: 300px;
+            height: 30px;
+            font-size: xx-large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+            border: none;
+            border-color: rgb(255, 255, 255);
+        }
+        table {
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-spacing: 30px;
+            border-style: none;
+            border-radius: 14px;
+            box-shadow: -1px 1px 16px rgb(255, 255, 255);
+        }
+        table:hover {
+            box-shadow: -1px 1px 76px rgb(0, 225, 0);
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="post" autocomplete="on">
+        <table>
+            <tr>
+                <td>
+                    <label for="">Dropdown Input</label>
+                </td>
+                <td>
+                    <select id="" name="">
+                        <optgroup label="Group option 1"></optgroup>
+                        <option value="option1.1">OPTION 1</option>
+                        <option value="option1.2">OPTION 2</option>
+                        <option value="option1.3">OPTION 3</option>
+                        <option value="option1.4">OPTION 4</option>
+                        <optgroup label="Group option 2"></optgroup>
+                        <option value="option2.1">OPTION 1</option>
+                        <option value="option2.2">OPTION 2</option>
+                        <option value="option2.3">OPTION 3</option>
+                        <option value="option2.4">OPTION 4</option>
+                        <optgroup label="Group option 3"></optgroup>
+                        <option value="option3.1">OPTION 1</option>
+                        <option value="option3.2">OPTION 2</option>
+                        <option value="option3.3">OPTION 3</option>
+                        <option value="option3.4">OPTION 4</option>
+                        <option value="" selected></option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <label for="">Textarea Input</label>
+                </td>
+                <td>
+                    <textarea name="" id=""></textarea>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <label for="">Fieldset Input</label>
+                </td>
+                <td>
+                    <fieldset>
+                        <legend>Fieldset Title</legend>
+                            <label for="">Label 1</label>
+                            <input type="text" name="" id=""><br><br>
+                            <label for="">Label 2</label>
+                            <input type="text" name="" id="">
+                    </fieldset>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <label for="">Datalist Input</label>
+                </td>
+                <td>
+                    <input type="text" list="browsers" name="">
+                    <datalist id="browsers">
+                        <option value="Edge"></option>
+                        <option value="Chrome"></option>
+                        <option value="Tor"></option>
+                        <option value="Firefox"></option>
+                        <option value="Opera"></option>
+                        <option value="Brave"></option>
+                        <option value="Safari"></option>
+                    </datalist>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <label for="">Radio Button</label>
+                </td>
+                <td>
+                    <input type="radio" name="radiobtn" id="">
+                    <input type="radio" name="radiobtn" id="">
+                    <input type="radio" name="radiobtn" id="">
+                    <input type="radio" name="radiobtn" id="">
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <label for="">Checkbox Button</label>
+                </td>
+                <td>
+                    <input type="checkbox" name="checkbtn" id="">
+                    <input type="checkbox" name="checkbtn" id="">
+                    <input type="checkbox" name="checkbtn" id="">
+                    <input type="checkbox" name="checkbtn" id="">
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <label for="">Range Button</label>
+                </td>
+                <td>
+                    <input type="range" name="rangeinp" id="" min="0" max="100">
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <label for="">Submit Button</label>
+                </td>
+                <td>
+                    <input type="submit" name="submitbtn" id="" class="submtbtn">
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <label for="">Button Input</label>
+                </td>
+                <td>
+                    <input type="button" value="BUTTON">
+                </td>
+            </tr>
+        </table><table>
+            <tr>
+                <td>
+                    <label for="">Text Input</label>
+                </td>
+                <td>
+                    <input type="text" name="textinp" id="">
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <label for="">Search Input</label>
+                </td>
+                <td>
+                    <input type="search" name="searchinp" id="">
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <label for="">Number Input</label>
+                </td>
+                <td>
+                    <input type="number" name="numberinp" id="">
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <label for="">Telephone Input</label>
+                </td>
+                <td>
+                    <input type="tel" name="telinp" id="" pattern="[0-9]{3}-[0-9]{7}">
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <label for="">URL Input</label>
+                </td>
+                <td>
+                    <input type="url" name="urlinp" id="">
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <label for="">Email Input</label>
+                </td>
+                <td>
+                    <input type="email" name="emailinp" id="">
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <label for="">Password Input</label>
+                </td>
+                <td>
+                    <input type="password" name="emailinp" id="">
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <label for="">Date Input</label>
+                </td>
+                <td>
+                    <input type="date" name="dateinp" id="">
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <label for="">Time Input</label>
+                </td>
+                <td>
+                    <input type="time" name="timeinp" id="">
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <label for="">Date Time Input</label>
+                </td>
+                <td>
+                    <input type="datetime-local" name="datetimeinp" id="">
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <label for="">Week Input</label>
+                </td>
+                <td>
+                    <input type="week" name="weekinp" id="">
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <label for="">Month Input</label>
+                </td>
+                <td>
+                    <input type="month" name="monthinp" id="">
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <label for="">Color Input</label>
+                </td>
+                <td>
+                    <input type="color" name="colorinp" id="">
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <label for="">File Input</label>
+                </td>
+                <td>
+                    <input type="file" name="fileinp" id="">
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <label for="">Hidden Input</label>
+                </td>
+                <td>
+                    <input type="hidden" id="" name="hiddeninp" value="Input not visible to use but can used by developers">
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <label for="">Image Input</label>
+                </td>
+                <td>
+                    <input type="image" src="../IMAGES/top.svg" alt="Image Input" style="width: 200px; height: 200px;">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Media</title>
+	<style>
+		video, audio {
+			width: 60%;
+		}
+		iframe {
+			width: 1600px;
+			height: 890px;
+		}
+		figure {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<th><figure>Video with controls</figure></th>
+		</tr>
+		<tr>
+			<td></td>
+			<video controls>
+				<source src="../VIDEOS/video1.mp4">
+			</video>
+		</tr>
+	</table>
+
+	<hr><hr><br><br>
+
+	<table>
+		<tr>
+			<th><figure>Video with autoplay</figure></th>
+		</tr>
+		<tr>
+			<td></td>
+			<video controls autoplay>
+				<source src="../VIDEOS/video1.mp4">
+			</video>
+		</tr>
+	</table>
+
+	<hr><hr><br><br>
+
+	<table>
+		<tr>
+			<th><figure>Video with mute</figure></th>
+		</tr>
+		<tr>
+			<td></td>
+			<video controls muted>
+				<source src="../VIDEOS/video1.mp4">
+			</video>
+		</tr>
+	</table>
+
+	<hr><hr><br><br>
+
+	<table>
+		<tr>
+			<th><figure>Audio with controls</figure></th>
+		</tr>
+		<tr>
+			<td></td>
+			<audio controls>
+				<source src="../VIDEOS/video1.mp4">
+			</audio>
+		</tr>
+	</table>
+
+	<hr><hr><br><br>
+
+	<table>
+		<tr>
+			<th><figure>Audio with autoplay</figure></th>
+		</tr>
+		<tr>
+			<td></td>
+			<audio controls autoplay>
+				<source src="../VIDEOS/video1.mp4">
+			</audio>
+		</tr>
+	</table>
+
+	<hr><hr><br><br>
+
+	<table>
+		<tr>
+			<th><figure>Video with mute</figure></th>
+		</tr>
+		<tr>
+			<td></td>
+			<audio controls muted>
+				<source src="../VIDEOS/video1.mp4">
+			</audio>
+		</tr>
+	</table>
+
+	<hr><hr><br><br>
+
+	<table>
+		<tr>
+			<td></td>
+			<td><iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0" frameborder="10px"></iframe></td>
+		</tr>
+		<tr>
+			<th><figure>Youtube with no controls</figure></th>
+		</tr>
+		<tr>
+			<td></td>
+			<td><iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=1" frameborder="10px"></iframe></td>
+		</tr>
+		<tr>
+			<th><figure>Youtube with controls (Default)</figure></th>
+		</tr>
+		<tr>
+			<td></td>
+			<td><iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=0" frameborder="10px"></iframe></td>
+		</tr>
+		<tr>
+			<th><figure>Youtube will play once (Default)</figure></th>
+		</tr>
+		<tr>
+			<td></td>
+			<td><iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1" frameborder="10px"></iframe></td>
+		</tr>
+		<tr>
+			<th><figure>Youtube will play loop</figure></th>
+		</tr>
+		<tr>
+			<td></td>
+			<td><iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=0" frameborder="10px"></iframe></td>
+		</tr>
+		<tr>
+			<th><figure>Youtube will not autoplay (Default)</figure></th>
+		</tr>
+		<tr>
+			<td></td>
+			<td><iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1" frameborder="10px"></iframe></td>
+		</tr>
+		<tr>
+			<th><figure>Youtube will autoplay</figure></th>
+		</tr>
+		<tr>
+			<td></td>
+			<td><iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?mute=0" frameborder="10px"></iframe></td>
+		</tr>
+		<tr>
+			<th><figure>Youtube will not muted (Default)</figure></th>
+		</tr>
+		<tr>
+			<td></td>
+			<td><iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?mute=1" frameborder="10px"></iframe></td>
+		</tr>
+		<tr>
+			<th><figure>Youtube will muted</figure></th>
+		</tr>
+	</table>
+</body>
+</html>
