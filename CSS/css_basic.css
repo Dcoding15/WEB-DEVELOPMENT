@@ -6,14 +6,42 @@
 		3. class     - HTML class names (in css class name starts with .)
 		4. universal - Applied to whole document (in 
 		5. grouping  - Combination of different selectors (separated using ,)
-*/
+	
+	Background - background of element
+	Border     - line around element
+	Margin     - space outside element's border
+	Padding    - space inside element's border
+	width      - vertical size of element
+	height     - horizontal size of element
+	
+	
+	Short hand property: -
+	-------------------
+	background: background-color background-image background-repeat background-attachment background-position
+	border: border-width border-style border-color
+	margin: margin-top margin-right margin-bottom margin-left
+	padding: padding-top padding-right padding-bottom padding-left
 
+	Note: -
+		1. If any border / margin / padding property has 4 values then it follow -> top right bottom left
+		2. If any border / margin / padding property has 3 values then it follow -> top left-right bottom
+		3. If any border / margin / padding property has 2 values then it follow -> top-bottom left-right
+		4. If any border / margin / padding property has 1 values then it follow -> top-bottom-left-right
+*/
 * {
 	font-size: x-large;
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 	font-weight: bold;
 	font-style: normal;
 	text-align: center;
+}
+
+#div_colorbg {
+	background-image: url(../IMAGES/CSS_ICON.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: left;
+	height: 1531px;
 }
 
 #div1 {
@@ -84,7 +112,18 @@
 
 #div_bgimg {
 	background-image: url(../IMAGES/CSS_ICON.png);
+	background-color: antiquewhite;
+	background-position: center right;
 	background-repeat: no-repeat;
-	width: 30%;
-	height: 900px;
+	background-attachment: fixed;
+	height: 1531px;
+}
+
+#div_border {
+	width: 300px;
+	height: 300px;
+	border-width: 10px 20px 30px 40px;
+	border-color: blue green yellow red;
+	border-style: solid dotted double dashed;
+	border-radius: 50%; /* At 50% border-radius become circle */
 }
