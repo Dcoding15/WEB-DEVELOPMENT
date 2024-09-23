@@ -119,11 +119,34 @@
 	height: 1531px;
 }
 
+/*
+
+Border, Margin, Padding: -
+	1. It follows argument as top right bottom left
+	2. Padding is space between two or more element
+	3. 
+*/
+
 #div_border {
 	width: 300px;
 	height: 300px;
-	border-width: 10px 20px 30px 40px;
+	border: 10px blue solid;
+	/* border-width: 10px 20px 30px 40px;
 	border-color: blue green yellow red;
-	border-style: solid dotted double dashed;
+	border-style: solid dotted double dashed; */
 	border-radius: 50%; /* At 50% border-radius become circle */
+}
+
+#div_margin {
+	width: 300px;
+	height: 300px;
+	margin: 130px 40px 40px 50px;
+	border: 5px green solid;
+	background-color: white;
+}
+
+#div_padding {
+	width: 300px;
+	height: 300px;
+	padding: 130px 40px
 }
