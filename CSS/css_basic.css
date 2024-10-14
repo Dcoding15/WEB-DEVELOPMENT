@@ -4,17 +4,17 @@
 		1. element   - HTML element names like p, div, span, table
 		2. id        - HTML id names (in css id name starts with #)
 		3. class     - HTML class names (in css class name starts with .)
-		4. universal - Applied to whole document (in 
+		4. universal - Applied to whole document (in
 		5. grouping  - Combination of different selectors (separated using ,)
-	
+
 	Background - background of element
 	Border     - line around element
 	Margin     - space outside element's border
 	Padding    - space inside element's border
 	width      - vertical size of element
 	height     - horizontal size of element
-	
-	
+
+
 	Short hand property: -
 	-------------------
 	background: background-color background-image background-repeat background-attachment background-position
@@ -100,7 +100,7 @@
 		Lightness: -
 			1. It represent lightness of color from 0% to 100%
 			2. Black -> 0%, Color itself -> 50%, White -> 100%
-		
+
 		Alpha: -
 			1. It represent transparency of color from 0 to 1
 			2. Fully transparent -> 0, Not transparent -> 1
@@ -122,9 +122,10 @@
 /*
 
 Border, Margin, Padding: -
-	1. It follows argument as top right bottom left
-	2. Padding is space between two or more element
-	3. 
+	1. border/margin/padding: top right bottom left
+	2. Padding is space between border and element.
+	3. Margin is gap between other elements.
+	4. Border is line between margin and padding.
 */
 
 #div_border {
@@ -148,5 +149,175 @@ Border, Margin, Padding: -
 #div_padding {
 	width: 300px;
 	height: 300px;
-	padding: 130px 40px
+	padding: 10px 20px 30px 40px;
+	border: 2px black solid;
+}
+
+#div_box_sizing {
+	width: 300px;
+	padding: 25px;
+	box-sizing: border-box;
+	background-color: green;
+	margin: 30px;
+}
+
+/* 
+outline: outline-width outline-style outline-color 
+outline is between margin and border.
+*/
+
+/*
+
+border and outline style: -
+2D lines: -
+	1. dotted
+	2. dashed
+	3. solid
+	4. doubled
+	5. none    - no line
+	6. hidded  - hidden line
+
+3D lines: -
+	1. groove
+	2. ridge
+	3. inset
+	4. outset
+
+*/
+#div_outline {
+	width: 300px;
+	border: 3px solid red;
+	outline: 3px dotted black;
+	/*outline-width: thick;
+	outline-style: dotted;
+	outline-color: black;*/
+	outline-offset: 10px;
+	margin: 30px;
+}
+
+/*
+Text alignment: -
+	1. right
+	2. left
+	3. center
+	4. justify
+
+Direction: -
+	1. rtl
+	2. ltr
+
+unicode-bidi: -
+	1. bidi-override / isolate-override
+	2. embed
+	3. isolate
+	4. normal
+	5. plaintext
+
+vertical alignment: -
+	1. text-top / sup
+	2. text-bottom / sub
+	3. baseline (default)
+
+text-decoration: text-decoration-line text-decoration-color text-decoration-style text-decoration-thickness
+
+text-decoration-line: - (required)
+	1. line-through
+	2. underline
+	3. overline
+
+text-decoration-style: -
+	1. solid
+	2. double
+	3. dotted
+	4. dashed
+	5. wavy
+
+Text Transform: -
+	1. uppercase
+	2. lowercase
+	3. capitalize
+
+Text Spacing: -
+	1. text-indent
+	2. letter-spacing
+	3. line-height
+	4. word-spacing
+	5. white-space
+
+text-shadow: [horizontal] [vertical] [blur] [color]
+@font-face {
+	font-family: font_name;
+	src: url(font_url_from_web_font);
+}
+font: [font-style] [font-variant] [font-weight] [font-size] [font-family]
+Font Style: -
+	1. normal
+	2. italic
+	3. oblique
+
+Font Variant: -
+	1. normal
+	2. small-caps
+
+Font Weight: -
+	1. normal
+	2. bold
+	3. bolder
+	4. lighter
+	5. 100 to 900
+
+Font Size: -
+	1. small
+	2. x-small
+	3. xx-small
+	4. medium
+	5. large
+	6. x-large
+	7. xx-large
+	8. smaller
+	9. larger
+*/
+#div_text {
+	width: 500px;
+	margin: 50px;
+	outline: 3px dotted black;
+	color: chartreuse;	/*text color*/
+	text-align: left;
+	direction: rtl;
+	unicode-bidi:isolate-override;
+	text-decoration: underline overline red wavy 2px;
+}
+
+.material-icons {
+	width: 90px;
+	border: 2px solid black;
+}
+
+/*
+List Style Types: -
+	1. armenian
+	2. circle
+	3. decimal
+	4. decimal-leading-zero
+	5. disc
+	6. georgian
+	7. lower-alpha
+	8. lower-greek
+	9. lower-latin
+	10. lower-roman
+	11. none
+	12. square
+	13. upper-alpha
+	14. upper-latin
+	15. upper-roman
+
+List Style Position: -
+	1. inside
+	2. outside
+
+list-style: list-style-position list-style-image/list-style-types;
+*/
+ul {
+	list-style: outside url("https://www2.atmos.umd.edu/~chepurin/STUFF/bullets/sqpurple.gif");
+	max-width: 150px;
 }
